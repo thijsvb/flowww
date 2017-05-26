@@ -1,7 +1,7 @@
 # flowww
-Flowing things through Perlin noise generated vector fields.
+These are the paths of things that flow through a Perlin Noise generated field. I think they look cool.
 
-Like this:
+Monocolor:
 
 ![white-black](flowww/examples/wit-zwart-1.png)
 
@@ -9,7 +9,7 @@ Like this:
 
 ![white-red](flowww/examples/wit-rood-0.png)
 
-Or in multiple colors:
+Multicolor:
 
 ![rainbow](flowwwMulticolor/examples/0-255-1.png)
 
