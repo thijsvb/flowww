@@ -11,4 +11,6 @@ Like this:
 
 Or in multiple colors:
 
-![rainbow](flowwwMulticolor/examples/0-255-0.png)
+![rainbow](flowwwMulticolor/examples/0-255-1.png)
+
+![blueish](flowwwMulticolor/examples/85-170-0.png)
