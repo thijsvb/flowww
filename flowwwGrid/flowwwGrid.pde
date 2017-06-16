@@ -10,6 +10,8 @@ Thing[] things;
 void setup() {
   size(1414, 1000);
   background(0);
+  randomSeed(14);
+  noiseSeed(14);
 
   field = new Field();
   things = new Thing[100];
@@ -35,7 +37,7 @@ void draw() {
 
 void keyPressed() {
   if (key == 's' || key == 'S') {
-    save("flow" + "-" + day() + "-" + month() + "-" + version++ + ".png");
+    save(int(grid) + ".png");
   }
   if (key == 't') println(things[0].path);
 }
@@ -94,7 +96,7 @@ class Thing {
     //fill(0, 255, 0, 10);
     //noStroke();
     //ellipse(pos.x, pos.y, 4, 4);
-    stroke(0, 255, 0, 10);
+    stroke(0, 255, 255, 5);
     strokeWeight(4);
     for (int i=0; i!=path.size()-1; ++i) {
       line(path.get(i).x, path.get(i).y, path.get(i+1).x, path.get(i+1).y);

@@ -9,6 +9,8 @@ Thing[] things;
 void setup() {
   size(1414, 1000);
   background(0);
+  randomSeed(14);
+  noiseSeed(14);
   
   field = new Field();
   things = new Thing[100];
