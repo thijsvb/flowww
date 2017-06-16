@@ -1,6 +1,14 @@
 # flowww
 These are the paths of things that flow through a Perlin Noise generated field. I think they look cool.
 
+![0](images/0.png)
+
+![15](images/15.png)
+
+![40](images/40.png)
+
+![75](images/75.png)
+
 Monocolor:
 
 ![white-black](flowww/examples/wit-zwart-1.png)
