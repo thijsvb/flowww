@@ -15,7 +15,7 @@ void setup() {
   for(int i=0; i!=things.length; ++i) {
     things[i] = new Thing(random(width), random(height), random(-2,2), random(-2,2));
   }
-  last = millis();
+  last = frameCount;
 }
 
 void draw() {
@@ -24,11 +24,11 @@ void draw() {
     things[i].show();
   }
   
-  if(millis() - last >= 10000) {
+  if(frameCount - last >= 600) {
     for(int i=0; i!=things.length; ++i) {
       things[i] = new Thing(random(width), random(height), random(-2,2), random(-2,2));
     }
-    last = millis();
+    last = frameCount;
   }
 }
 
@@ -65,27 +65,21 @@ class Thing {
     pos = new PVector(x, y);
     vel = new PVector(vx, vy);
     acc = new PVector();
-    path = new ArrayList<PVector>();
   }
   
   void update() {
-    path.add(pos.copy());
     pos.add(vel);
     vel.add(acc).limit(2);
     acc.mult(0);
     
-    float x = (pos.x + width)%width;
-    float y = (pos.y + height)%height;
-    pos.set(x, y);
+    //float x = (pos.x + width)%width;
+    //float y = (pos.y + height)%height;
+    //pos.set(x, y);
     
     int c = (floor(pos.x/d)+field.cols)%field.cols;
     int r = (floor(pos.y/d)+field.rows)%field.rows;
     PVector f = field.vectors[c][r].copy();
     acc.add(f);
-    
-    if(path.size() == 100) {
-      path.remove(0);
-    }
   }
   
   void show() {

@@ -16,7 +16,7 @@ void setup() {
   for (int i=0; i!=things.length; ++i) {
     things[i] = new Thing(random(width), random(height), random(-2, 2), random(-2, 2));
   }
-  last = millis();
+  last = frameCount;
 }
 
 void draw() {
@@ -24,12 +24,12 @@ void draw() {
     things[i].update();
   }
 
-  if (millis() - last >= 10000) {
+  if (frameCount - last >= 600) {
     for (int i=0; i!=things.length; ++i) {
       things[i].show();
       things[i] = new Thing(random(width), random(height), random(-2, 2), random(-2, 2));
     }
-    last = millis();
+    last = frameCount;
   }
 }
 
